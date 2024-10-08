@@ -1,0 +1,23 @@
+# Lab Exercise 3: Convert Vowels to Uppercase
+# Features: Takes a string as input and converts all vowels in the string to their uppercase forms.
+# Procedure:
+# 1. Define a function to convert vowels to uppercase.
+# 2. Use list comprehension to iterate through the string.
+# 3. Convert vowels ('a', 'e', 'i', 'o', 'u') to uppercase; non-vowel characters remain unchanged.
+# 4. Return the resulting string with vowels in uppercase.
+
+def vowels_to_upper(string):
+    """Convert all vowels in the input string to uppercase.
+
+    Args:
+        string (str): The input string to process.
+
+    Returns:
+        str: A new string with all vowels converted to uppercase.
+    """
+    return ''.join([char.upper() if char.lower() in "aeiou" else char for char in string])
+
+# Test cases to validate the function
+print("Result for empty string:", vowels_to_upper(""))  # Output: ""
+print("Result for 'Hello, I am Aidan!':", vowels_to_upper("Hello, I am Aidan!"))  # Output: "HEllO, wOrld!"
+print("Result for 'test Code':", vowels_to_upper("tEst Code"))  # Output: "hEllO hI byE"
